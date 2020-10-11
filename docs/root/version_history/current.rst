@@ -32,6 +32,7 @@ Minor Behavior Changes
 * watchdog: the watchdog action :ref:`abort_action <envoy_v3_api_msg_watchdog.v3alpha.AbortActionConfig>` is now the default action to terminate the process if watchdog kill / multikill is enabled.
 * xds: to support TTLs, heartbeating has been added to xDS. As a result, responses that contain empty resources without updating the version will no longer be propagated to the
   subscribers. To undo this for VHDS (which is the only subscriber that wants empty resources), the `envoy.reloadable_features.vhds_heartbeats` can be set to "false".
+* http: added :ref:`response_headers_to_rewrite <envoy_v3_api_field_config.route.v3.RouteAction.response_headers_to_rewrite>` to RouteAction to allow users to rewrite headers received from the upstream cluster.
 
 Bug Fixes
 ---------

@@ -78,6 +78,7 @@ New Features
 * http: clusters now support selecting HTTP/1 or HTTP/2 based on ALPN, configurable via :ref:`alpn_config <envoy_v3_api_field_extensions.upstreams.http.v3.HttpProtocolOptions.auto_config>` in the :ref:`http_protocol_options <envoy_v3_api_msg_extensions.upstreams.http.v3.HttpProtocolOptions>` message.
 * jwt_authn: added support for :ref:`per-route config <envoy_v3_api_msg_extensions.filters.http.jwt_authn.v3.PerRouteConfig>`.
 * kill_request: added new :ref:`HTTP kill request filter <config_http_filters_kill_request>`.
+* http: added :ref:`response_headers_to_rewrite <envoy_v3_api_field_config.route.v3.RouteAction.response_headers_to_rewrite>` to RouteAction to allow users to rewrite headers received from the upstream cluster.
 * listener: added an optional :ref:`default filter chain <envoy_v3_api_field_config.listener.v3.Listener.default_filter_chain>`. If this field is supplied, and none of the :ref:`filter_chains <envoy_v3_api_field_config.listener.v3.Listener.filter_chains>` matches, this default filter chain is used to serve the connection.
 * listener: added back the :ref:`use_original_dst field <envoy_v3_api_field_config.listener.v3.Listener.use_original_dst>`.
 * log: added a new custom flag ``%_`` to the log pattern to print the actual message to log, but with escaped newlines.

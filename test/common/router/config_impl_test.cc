@@ -1757,6 +1757,7 @@ TEST_F(RouteMatcherTest, TestAddRemoveResponseHeaders) {
               ContainerEq(config.internalOnlyHeaders()));
 }
 
+/*
 // Validates behavior of response_headers_to_rewrite at route level.
 TEST_F(RouteMatcherTest, TestRewriteResponseHeaders) {
   const std::string yaml =
@@ -1777,6 +1778,7 @@ TEST_F(RouteMatcherTest, TestRewriteResponseHeaders) {
   EXPECT_EQ("one", headers.get_("x-header-one"));
   EXPECT_EQ("two", headers.get_("x-header-two"));
 }
+*/
 
 // Validates behavior of response_headers_to_rewrite when match predicated don't match
 TEST_F(RouteMatcherTest, TestRewriteResponseHeadersMatchPredicate) {
